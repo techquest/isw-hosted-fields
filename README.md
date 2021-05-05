@@ -1535,12 +1535,12 @@ Each of these fields have three properties, namely:
     b. activeClass: The CSS class that displays the div.  
 
 3. paymentParameters. This has the following properties:  
-    a. amount: Total amount to be paid in kobo.  
-    b. currencyCode: The ISO code of the currency being used.  
-    c. dateOfPayment: The date the payment was made.  
-    d. payableCode: As provided on your Quickteller Business dashboard.  
-    e. merchantCode: As provided on your [Quickteller Business dashboard](https://business.quickteller.com/developertools).  
-    f. transactionReference: A unique reference for every transaction.  
+    a. **amount:** Total amount to be paid in kobo.  
+    b. **currencyCode:** The ISO code of the currency being used.  
+    c. **dateOfPayment:** The date the payment was made.  
+    d. **payableCode:** As provided on your [Quickteller Business dashboard](https://business.quickteller.com/developertools).  
+    e. **merchantCode:** As provided on your [Quickteller Business dashboard](https://business.quickteller.com/developertools).  
+    f. **transactionReference:** A unique reference for every transaction.  
 
 #### Focus and Blur Events
 Below is a description of the object returned by the focus and blur events:
