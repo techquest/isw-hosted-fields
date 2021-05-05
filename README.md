@@ -5,7 +5,7 @@
 With **hosted fields**, you are able to present fields such as **card number**, **expiry date**, **CVV**, **pin** and **OTP** to the users in an iframe just the way you want.  
 We have created two samples that you can work with and even modify to your taste.
 
-#### Sample 1
+### Sample 1
 ##### Payment Flow
 In this sample, the payment flow is divided into three steps:
 1. In the first step, users enter their card details.
@@ -745,7 +745,7 @@ window.onload = function(){
 }
 ```
 
-#### Sample 2
+### Sample 2
 Below is another approach to the integration:
 ```html
 <!DOCTYPE html>
