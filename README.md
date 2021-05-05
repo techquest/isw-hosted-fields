@@ -449,12 +449,12 @@ function createHandler(createError, hostedFieldsInstance) {
 The callback method takes two parameters:
 - createError: Returns an error during the creation process.
 - hostedFieldInstance: Creates a new instance of the hosted fields. The instance of the hosted fields has the following methods on it:
-    a. makePayment()
-    b. validatePayment()
-    c. validatePayment()
-    d. binConfiguration()
-    e. getFieldsState()
-    f. on()
+    a. makePayment()  
+    b. validatePayment()  
+    c. validatePayment()  
+    d. binConfiguration()  
+    e. getFieldsState()  
+    f. on()  s
 
 The on() method handles events like focus, blur, validation, and cardinal-response. To check for the validation of each field you can call instance.getFieldsState().
 
@@ -741,7 +741,7 @@ function setActivePage(pageName) {
 ```
 
 ### References
-##### The Configuration Object
+#### The Configuration Object
 
 ##### Focus and Blur Events
 Below is a description of the object returned by the focus and blur events:
