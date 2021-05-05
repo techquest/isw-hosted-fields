@@ -56,11 +56,11 @@ var configuration = {
         activeClass: 'show'
     },
     paymentParameters: {
-        amount: 150000,
+        amount: 10000,
         currencyCode: "566",
         dateOfPayment: '2019-11-08T00:00:00',
         payableCode: "Default_Payable_MX26070",
-        merchantCustomerName: "She's nice",
+        merchantCustomerName: "John Doe",
         merchantCode: 'MX26070',
         transactionReference: "isw_hosted_field_test:" + Date.now(),
     }

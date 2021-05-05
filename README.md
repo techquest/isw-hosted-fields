@@ -322,7 +322,7 @@ body {
 ```
 
 ###### 3. Add script.
-The three steps involved in the payment flow have been included in the HTML code above. We need to be able to render these pages dynamically.
+The three steps involved in the payment flow have been included in the HTML code above. We need to be able to render these pages dynamically.  
 a. Create the configuration object
 
 ```js
@@ -447,8 +447,8 @@ function createHandler(createError, hostedFieldsInstance) {
 ```
 
 The callback method takes two parameters:
-- createError: Returns an error during the creation process.
-- hostedFieldInstance: Creates a new instance of the hosted fields. The instance of the hosted fields has the following methods on it:
+- createError: Returns an error (if any) during the creation process.
+- hostedFieldInstance: Creates a new instance of the hosted fields. The instance of the hosted fields has the following methods on it:  
     a. makePayment()  
     b. validatePayment()  
     c. validatePayment()  
@@ -522,7 +522,7 @@ var configuration = {
         currencyCode: "566",
         dateOfPayment: '2019-11-08T00:00:00',
         payableCode: "Default_Payable_MX26070",
-        merchantCustomerName: "She's nice",
+        merchantCustomerName: "John Doe",
         merchantCode: 'MX26070',
         transactionReference: "isw_hosted_field_test:" + Date.now(),
     }
@@ -682,6 +682,7 @@ let responseMessageDiv = document.getElementById('response-message')
 
 function showNotification(error, response){
     if(response){
+        console.log('response: ', response);
         let responseCode = response.responseCode
         let responseMessage = response.plainTextSupportMessage
         if(response.plainTextSupportMessage){
@@ -1553,3 +1554,6 @@ Below is a description of the object returned by the validate event.
 | expirationDate | object | <table width="100%">  <tr><td>expired</td><td>boolean</td></tr>  <tr><td>isEmpty</td><td>boolean</td></tr>  <tr><td>valid</td><td>boolean</td></tr>  </table> |
 | otp            | object | <table width="100%"> <tr><td>isEmpty</td><td>boolean</td></tr>  <tr><td>valid</td><td>boolean</td></tr>  </table>                                             |
 | pin            | object | <table width="100%">  <tr><td>isEmpty</td><td>boolean</td></tr>  <tr><td>valid</td><td>boolean</td></tr>  </table>                                            |
+
+#### Response Codes
+A list of all the possible response codes and their descriptions can be found [here](https://sandbox.interswitchng.com/docbase/docs/webpay/response-codes/)
