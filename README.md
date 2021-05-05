@@ -748,6 +748,8 @@ window.onload = function(){
 
 ### Sample 2
 Below is another approach to the integration:
+
+HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -850,6 +852,7 @@ Below is another approach to the integration:
 </html>
 ```
 
+CSS
 ```css
 body {
   margin: 0px;
@@ -1127,6 +1130,7 @@ body {
 }
 ```
 
+Javascript
 ```js
 var timestampString = new Date().getTime().toString();
 
