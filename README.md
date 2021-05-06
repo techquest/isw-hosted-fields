@@ -62,9 +62,9 @@ Below is a detailed explanation to each property in the configuration object:
 ##### The Configuration Object
 1. **fields:** These are references to the input elements on the checkout page. They include cardNumber, expirationDate, cvv, pin and otp.  
 Each of these fields have three properties, namely:  
-    a. **selector:** This is the ID selector of the field.
-    b. **placeholder:** Initially displayed text on the field.
-    c. **styles:** This is used to style each field.
+    a. **selector:** This is the ID selector of the field.  
+    b. **placeholder:** Initially displayed text on the field.  
+    c. **styles:** This is used to style each field.  
 
 2. **cardinal:** This has two properties, namely:  
     a. **containerSelector:** The identifier for the container div.  
