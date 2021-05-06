@@ -74,12 +74,12 @@ Each of these fields have three properties, namely:
     a. **amount:** Total amount to be paid in kobo.  
     b. **currencyCode:** The ISO code of the currency being used.  
     c. **dateOfPayment:** The date the payment was made.  
-    d. **payableCode:** As provided on your Quickteller Business dashboard.  
+    d. **payableCode:** As provided on your [Quickteller Business dashboard](https://business.quickteller.com/developertools).    
     e. **merchantCode:** As provided on your [Quickteller Business dashboard](https://business.quickteller.com/developertools).  
-    f. **transactionReference:** A unique reference for every transaction.    s
+    f. **transactionReference:** A unique reference for every transaction.   
 
 
-Using the configuration object above, the corresponding HTML should have the properties of the 'fields' property with their respective id selectors like so:  
+Using the configuration object above, the corresponding HTML should have elements with IDs set to the properties of the 'fields' property like so:  
 ```html
     <div class="payment-form-container" data-field-type="pan">
       <div class="form-header">
