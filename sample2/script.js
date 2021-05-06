@@ -1,4 +1,4 @@
-var configuration = {
+let configuration = {
     fields: {
         cardNumber: {
             selector: '#cardNumber-container',
