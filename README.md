@@ -170,7 +170,7 @@ The callback function takes two parameters:
     ```
     A list of all possible response codes and their meanings can be found [here](https://sandbox.interswitchng.com/docbase/docs/webpay/response-codes/)
      
-    d. on(): The on() method handles events like focus, blur, validation, and cardinal-response. 
+    d. on(): This method handles events like focus, blur, validation, and cardinal-response.   
     e. getFieldsState(): To check for the validation of each field you can call instance.getFieldsState().
 
 
