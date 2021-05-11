@@ -9,8 +9,6 @@ Setting up the hosted fields is as simple as doing the following:
 ```js
 isw.hostedFields.create(configuration, callback);
 ```
-From the snippet above, notice that the 'create' method takes two parameters. The first parameter is the configuration object while the second is a callback function.  
-
 The configuration object should be as described below:
 ```js
 let configuration = {
@@ -66,7 +64,7 @@ Each of these fields have three properties, namely:
     b. **placeholder:** Initially displayed text on the field.  
     c. **styles:** This is used to style each field.  
 
-2. **cardinal:** This has two properties, namely:  
+2. **cardinal:** When the safetoken OTP service is not used, it is considered a cardinal transaction. You might want to customize the OTP page. There are two properties that can be used, namely:  
     a. **containerSelector:** The identifier for the container div.  
     b. **activeClass:** The CSS class that displays the div.  
 
@@ -161,14 +159,21 @@ Using the configuration object above, the corresponding HTML should have element
 The callback function takes two parameters:
 - createError: This returns an error (if any) during the creation process.
 - hostedFieldInstance: This creates a new instance of the hosted fields. The instance of the hosted fields has the following methods on it:  
-    a. makePayment()  
-    b. validatePayment()  
-    c. validatePayment()  
-    d. binConfiguration()  
-    e. getFieldsState()  
-    f. on() 
+     
+    a. getBinConfiguration(): After the user enters their card details, this function checks to see the details are valid. If valid, it invokes the makePayment() function, otherwise, it returns an error.  
+    b. makePayment(): When this function is called, an OTP is sent. The user is redirected to the OTP page where the sent value is entered.  
+    c. validatePayment(): After entering the OTP, this method is called. An attempt to charge the card is made and a response is returned. A sample response is indicated below:
+    ```js
+    {
+        responseCode: "00"
+    }
+    ```
+    A list of all possible response codes and their meanings can be found [here](https://sandbox.interswitchng.com/docbase/docs/webpay/response-codes/)
+     
+    d. on(): The on() method handles events like focus, blur, validation, and cardinal-response. 
+    e. getFieldsState(): To check for the validation of each field you can call instance.getFieldsState().
 
-The on() method handles events like focus, blur, validation, and cardinal-response. To check for the validation of each field you can call instance.getFieldsState().  
+
 A sample callback function will be like so:
 
 ```js
@@ -215,7 +220,7 @@ function callback(createError, hostedFieldsInstance) {
 ```
 
 ### Events
-The 'on' method gives you the ability to hook into the focus, blur and validation events and allows you to subscribe to these events.
+The 'on' method gives you the ability to hook into the focus, blur, validation and cardinal-response events. It allows you to subscribe to these events.
 #### Focus and Blur Events
 Below is a description of the object returned by the focus and blur events:
 | Key       | Type   | Description                                                                               |

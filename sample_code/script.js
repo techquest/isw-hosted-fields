@@ -206,6 +206,7 @@ function handleValidateResponse(err, response) {
         showNotification(err, null);
         return;
     }
+    console.log('rrrr: ', response)
 
     if(response){
         showNotification(null, response)
